@@ -1,24 +1,15 @@
-package com.cerberossss4.ctrl.suono
+package com.cerberossss4.ctrl.suono.data
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-
-class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            MaterialTheme(
-                colorScheme = MaterialTheme.colorScheme,
-                typography = MaterialTheme.typography,
-                shapes = MaterialTheme.shapes
-            ) {
-                Surface(color = MaterialTheme.colorScheme.background) {
-                    SuonoApp()
-                }
-            }
-        }
-    }
+data class Track(
+    val id: String,
+    val title: String,
+    val artist: String,
+    val album: String,
+    val durationSeconds: Int,
+    val coverUrl: String,
+    val audioUrl: String,
+    val licenseUrl: String
+) {
+    val durationLabel: String
+        get() = "%d:%02d".format(durationSeconds / 60, durationSeconds % 60)
 }
