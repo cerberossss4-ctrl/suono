@@ -1,35 +1,35 @@
-# Gradle files
-.gradle/
-build/
-.kotlin/
+# Suono
 
-# Local configuration file (sdk path, etc)
-local.properties
+This repository contains an Android app prototype for a music streaming experience.
 
-# Log/OS Files
-*.log
+## What it includes
 
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.aab
-*.apk
-output-metadata.json
+- Material 3 interface
+- list of curated tracks
+- playback using ExoPlayer
+- simple player controls
+- ready-to-replace demo catalog
 
-# IntelliJ
-*.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
+## Important note
 
-# Keystore files
-*.jks
-*.keystore
+This project is intentionally built as a legal starter app using royalty-free demo audio URLs. It is designed to be adapted to a licensed music provider or a backend with authorized rights.
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
+For a production app that streams real, licensed artist catalog content, you must integrate an authorized provider or a custom backend with clear licensing and API access.
 
-# Android Profiling
-*.hprof
+## Getting started
+
+1. Open the project in Android Studio.
+2. Let Gradle sync.
+3. Run the `app` module on an emulator or physical device.
+
+## Main package
+
+- `app/src/main/java/com/cerberossss4/ctrl/suono` contains the Android app code
+- `app/src/main/java/com/cerberossss4/ctrl/suono/data` contains the demo catalog model
+
+## Next steps for a real music catalog
+
+- replace `DemoCatalog` with a real API response
+- connect to a licensed provider
+- add authentication, search, favorites, and playlists
+- add cover art and metadata from your backend
